@@ -45,20 +45,38 @@ namespace ExerciciosEstruturaSequencial
             //seu número de horas trabalhadas, o valor que recebe por
             //hora e calcula o salário desse funcionário.A seguir,
             //mostre o número e o salário do funcionário, com duas casas decimais.
-
             int horaFuncionario, numFuncionario;
             float salarioTotal, salarioHora;
-
             numFuncionario = int.Parse(Console.ReadLine());
             horaFuncionario = int.Parse(Console.ReadLine());
             salarioHora = float.Parse(Console.ReadLine());
-
             salarioTotal = salarioHora * horaFuncionario;
-            Console.WriteLine("Funcionário Número: "+ numFuncionario);
-            Console.WriteLine("Salário Total: " + salarioTotal.ToString("F2"), CultureInfo.InvariantCulture);
+            Console.WriteLine("Funcionário Número: " + numFuncionario);
+            Console.WriteLine("Salário Total: R$" + salarioTotal.ToString("F2"), CultureInfo.InvariantCulture);
 
-
-
+            //Fazer um programa para ler o código de uma peça 1,
+            //o número de peças 1,
+            //o valor unitário de cada peça 1,
+            //o código de uma peça 2,
+            //o número de peças 2 e
+            //o valor unitário de cada peça 2.
+            //Calcule e mostre o valor a ser pago.
+            string entradaDeDados;
+            entradaDeDados = Console.ReadLine();
+            string[] vetDados= entradaDeDados.Split(' ');
+            string codigoPeca1 = vetDados[0];
+            int qtddePeca1 = int.Parse(vetDados[1]);
+            float valorPeca1 = float.Parse(vetDados[2]);
+            vetDados = Console.ReadLine().Split(' ');
+            string codigoPeca2 = vetDados[0];
+            int qtddePeca2 = int.Parse(vetDados[1]);
+            float valorPeca2 = float.Parse(vetDados[2]);
+            float subTotal1, subTotal2, total;
+            subTotal1 = (float)valorPeca1 * qtddePeca1;
+            subTotal2 = (float)valorPeca2 * qtddePeca2;
+            total = subTotal2 + subTotal1;
+            Console.Write("VALOR A PAGAR: R$ " + total.ToString("F2", CultureInfo.InvariantCulture));
+           
         }
     }
 }
