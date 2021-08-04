@@ -41,6 +41,22 @@ namespace ExerciciosEstruturaSequencial
             Console.Write("DIFERENÇA = ");
             Console.WriteLine(difDoProd.ToString("F4"), CultureInfo.InvariantCulture);
 
+            //Fazer um programa que leia o número de um funcionário,
+            //seu número de horas trabalhadas, o valor que recebe por
+            //hora e calcula o salário desse funcionário.A seguir,
+            //mostre o número e o salário do funcionário, com duas casas decimais.
+
+            int horaFuncionario, numFuncionario;
+            float salarioTotal, salarioHora;
+
+            numFuncionario = int.Parse(Console.ReadLine());
+            horaFuncionario = int.Parse(Console.ReadLine());
+            salarioHora = float.Parse(Console.ReadLine());
+
+            salarioTotal = salarioHora * horaFuncionario;
+            Console.WriteLine("Funcionário Número: "+ numFuncionario);
+            Console.WriteLine("Salário Total: " + salarioTotal.ToString("F2"), CultureInfo.InvariantCulture);
+
 
 
         }
